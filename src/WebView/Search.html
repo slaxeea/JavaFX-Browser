@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Browser</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="description" content="Browser" />
+    <meta name="keywords" content="Browser" />
+    <meta name="author" content="Simon Kappeler" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta lang="de" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <div class="search-txt">
+        <form action="" method="POST" id="form_thing">
+          <a for="input">Search for: </a>
+          <br />
+          <input
+            type="text"
+            id="input"
+            name="input"
+            class="input"
+          /><br /><br />
+        </form>
+
+        <button
+          type="submit"
+          id="submit"
+          value="Search"
+          class="main-btn"
+          onclick="funca()"
+          form="form_thing"
+        >Search</button>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function funca() {
+        var base = "https://duckduckgo.com/?t=ffab&q=";
+        var ort = document.getElementById("input").value;
+        var full = base + ort;
+        window.location(full, "_blank");
+      }
+    </script>
+  </body>
+</html>
